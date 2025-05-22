@@ -14,6 +14,17 @@ public class Week3 {
             example2();
             example3();
             example4();
+
+            FunInterface funInterface = new FunInterface() {
+                @Override
+                public int shout(String text) {
+                    return text.length();
+                }
+            };
+
+            FunInterface funInterface1 = text -> text.length();
+
+
     }
     static void example1(){
         int sum = 0;
