@@ -106,9 +106,10 @@ public class CameraModel {
         setMake(make);
     }
 
-//    public ArrayList<String> getAllCompanies(){
-//        Companies.values();
-//        List.of(Companies.values());
-//        return Arrays.asList(Companies.values());
-//    }
+    public String toString(){
+
+        return String.format("%s %s %s", color, make, model);
+    }
+
+
 }
