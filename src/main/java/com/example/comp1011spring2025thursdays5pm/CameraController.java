@@ -69,6 +69,17 @@ public class CameraController {
                 once user presses on the camera submit button
                 display the data to the output Node
          */
+        int index = cbCameraList.getSelectionModel().getSelectedIndex();
+        if(index >= 0){
+            System.out.println("user has made a selection");
+            CameraModel selected = cbCameraList.getSelectionModel().getSelectedItem();
+String details = String.format("Color: %s, Resolution: %d, Make: %s, Iso: %.1f, Model: %s, Lens: %s",
+        selected.getColor(), selected.getResolution(), selected.getMake(),
+        selected.getIso(), selected.getModel(), selected.getLens()
+        );
+           // output.setText(cbCameraList.getSelectionModel().getSelectedItem().toString());
+            output.setText(details);
+        }
 
     }
 
