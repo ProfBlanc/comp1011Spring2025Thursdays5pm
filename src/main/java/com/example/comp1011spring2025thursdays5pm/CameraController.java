@@ -112,16 +112,9 @@ String details = String.format("Color: %s, Resolution: %d, Make: %s, Iso: %.1f, 
 
         cbMake.getItems().addAll(CameraModel.Companies.values());
         cbMake.getSelectionModel().selectFirst();
-        cbCameraList.getItems().addAll(populateCameraList());
+        cbCameraList.getItems().addAll(CameraModel.populateCameraList());
 
     }
-    public static List<CameraModel> populateCameraList(){
-        List<CameraModel> list = new ArrayList<>();
-        //String lens, String color, double iso, int resolution, String model, Companies make
-list.add(new CameraModel("lens", "black", 100, 1080, "Model", CameraModel.Companies.NIKON));
-list.add(new CameraModel("cool", "red", 200, 2080, "Horse", CameraModel.Companies.CANON));
-list.add(new CameraModel("beans", "black", 100, 3080, "Buggy", CameraModel.Companies.FUJIFILM));
-    return list;
-    }
+
 
 }

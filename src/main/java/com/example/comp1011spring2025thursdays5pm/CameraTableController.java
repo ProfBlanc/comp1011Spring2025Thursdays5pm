@@ -17,17 +17,20 @@ public class CameraTableController {
     private void initialize() {
 
 
-        TableColumn<CameraModel, String> columnLens = new TableColumn<>("Column X");
+        TableColumn<CameraModel, String> columnLens = new TableColumn<>("Lens Type");
         columnLens.setCellValueFactory(new PropertyValueFactory<>("lens"));
 
-
-        TableColumn<CameraModel, String> columnColor = new TableColumn<>("Other Name");
+        TableColumn<CameraModel, String> columnColor = new TableColumn<>("Camera Color");
         columnColor.setCellValueFactory(new PropertyValueFactory<>("color"));
 
-        tableView.getColumns().add(columnLens);
-        tableView.getColumns().add(columnColor);
+        columnLens.setPrefWidth(150);
+        columnColor.setPrefWidth(150);
 
-        tableView.getItems().addAll(CameraController.populateCameraList());
+
+        tableView.getColumns().add(columnColor);
+        tableView.getColumns().add(columnLens);
+
+        tableView.getItems().addAll(CameraModel.populateCameraList());
 
 
     }

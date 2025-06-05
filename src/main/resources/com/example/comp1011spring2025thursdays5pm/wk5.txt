@@ -1,0 +1,10 @@
+Participant
+	name: S, avatar: Image
+Quiz
+	many questions
+Question
+	options
+	answer
+	questionText
+QuestionOption
+	text`
