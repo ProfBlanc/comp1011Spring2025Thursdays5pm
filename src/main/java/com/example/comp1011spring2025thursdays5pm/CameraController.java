@@ -115,7 +115,7 @@ String details = String.format("Color: %s, Resolution: %d, Make: %s, Iso: %.1f, 
         cbCameraList.getItems().addAll(populateCameraList());
 
     }
-    private List<CameraModel> populateCameraList(){
+    public static List<CameraModel> populateCameraList(){
         List<CameraModel> list = new ArrayList<>();
         //String lens, String color, double iso, int resolution, String model, Companies make
 list.add(new CameraModel("lens", "black", 100, 1080, "Model", CameraModel.Companies.NIKON));
