@@ -24,7 +24,6 @@ public class Week3 {
 
             FunInterface funInterface1 = text -> text.length();
 
-
     }
     static void example1(){
         int sum = 0;
