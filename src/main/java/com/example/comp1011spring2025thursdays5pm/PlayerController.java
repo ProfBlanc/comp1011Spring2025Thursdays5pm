@@ -1,4 +1,5 @@
-package com.example.demo5;
+package com.example.comp1011spring2025thursdays5pm;
+
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -57,14 +58,16 @@ public class PlayerController {
             return;
         }
         String lowerKeyword = keyword.toLowerCase();
-        List<Player> filtered = new ArrayList<>();
-        for (Player p : allPlayers) {
-            String fullName = p.getFull_name().toLowerCase();
-            if (fullName.contains(lowerKeyword)) {
-                filtered.add(p);
-            }
-        }
-        table.getItems().setAll(filtered);
+//        List<Player> filtered = new ArrayList<>();
+//        for (Player p : allPlayers) {
+//            String fullName = p.getFull_name().toLowerCase();
+//            if (fullName.contains(lowerKeyword)) {
+//                filtered.add(p);
+//            }
+//        }
+//        table.getItems().setAll(filtered);
+
+table.getItems().setAll(allPlayers.stream().filter(p-> p.getFull_name().contains(lowerKeyword)).toList());
     }
 
     private void showDetail(Player player) {

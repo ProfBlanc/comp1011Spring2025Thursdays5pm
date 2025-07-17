@@ -1,4 +1,4 @@
-package com.example.demo5;
+package com.example.comp1011spring2025thursdays5pm;
 
 public class Player {
     public int id;

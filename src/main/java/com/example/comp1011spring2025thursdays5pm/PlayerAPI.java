@@ -1,4 +1,4 @@
-package com.example.demo5;
+package com.example.comp1011spring2025thursdays5pm;
 
 import com.google.gson.*;
 import java.io.IOException;
